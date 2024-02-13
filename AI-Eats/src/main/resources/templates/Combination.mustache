@@ -1,0 +1,53 @@
+{{>layout/header}}
+
+
+<div class="col-md-12">
+    <button type="button" class="btn btn-labeled btn-default">
+        <span class="btn-label"><i class="fa fa-chevron-left"></i></span>뒤로가기
+    </button>
+    <h1>콤비네이션</h1>
+</div>
+
+<br><br>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="기본가격">기본가격:18900원</label><br>
+            </div>
+
+            <div class="form-group">
+                <label for="사이즈">사이즈</label><br>
+                <select id = "사이즈">
+                    <option value = "Medium">미디움</option>
+                    <option value = "Large">라지(+1500)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="엣지">엣지</label><br>
+                <select id = "엣지">
+                    <option value = "basic">기본엣지</option>
+                    <option value = "cheeze">치즈크러스트(+3000)</option>
+                    <option value = "cream">크림치즈크러스트(+3500)</option>
+                    <option value = "Sweet-potatoe">고구마크러스트(+3500)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="음료">음료</label><br>
+                <select id = "음료">
+                    <option value = "basic">코카콜라500ml(+2000)</option>
+                    <option value = "cheeze">제로콜라500ml(+2500)</option>
+                    <option value = "cream">코카콜라1.25L(+4000)</option>
+                    <option value = "Sweet-potatoe">제로코카콜라1.25L(+4500)</option>
+                </select>
+            </div>
+        </form>
+
+        <button type="button" class="btn btn-primary" id="btn-save">담기</button>
+    </div>
+</div>
+
+{{>layout/footer}}
