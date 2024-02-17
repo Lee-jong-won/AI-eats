@@ -12,42 +12,63 @@
 
 <div class="col-md-12">
     <div class="col-md-4">
-        <form>
-            <div class="form-group">
-                <label for="기본가격">기본가격:18900원</label><br>
-            </div>
+        <div class="basic price">
+            <h2>기본 가격:<strong id="기본가격">18900</strong></h2>
+        </div>
 
-            <div class="form-group">
-                <label for="사이즈">사이즈</label><br>
-                <select id = "사이즈">
-                    <option value = "Medium">미디움</option>
-                    <option value = "Large">라지(+1500)</option>
-                </select>
-            </div>
+        <br><br>
 
-            <div class="form-group">
-                <label for="엣지">엣지</label><br>
-                <select id = "엣지">
-                    <option value = "basic">기본엣지</option>
-                    <option value = "cheeze">치즈크러스트(+3000)</option>
-                    <option value = "cream">크림치즈크러스트(+3500)</option>
-                    <option value = "Sweet-potatoe">고구마크러스트(+3500)</option>
-                </select>
-            </div>
+        <div class="size">
+            <label for="사이즈">사이즈</label><br>
+            <select id="사이즈">
+                <option value="0">미디움</option>
+                <option value="1500">라지(+1500)</option>
+            </select>
+        </div>
 
-            <div class="form-group">
-                <label for="음료">음료</label><br>
-                <select id = "음료">
-                    <option value = "basic">코카콜라500ml(+2000)</option>
-                    <option value = "cheeze">제로콜라500ml(+2500)</option>
-                    <option value = "cream">코카콜라1.25L(+4000)</option>
-                    <option value = "Sweet-potatoe">제로코카콜라1.25L(+4500)</option>
-                </select>
-            </div>
-        </form>
+        <br>
+
+        <div class="Edge">
+            <label for="엣지">엣지</label><br>
+            <select id="엣지">
+                <option value="0">기본엣지</option>
+                <option value="3000">치즈크러스트(+3000)</option>
+                <option value="3500">크림치즈크러스트(+3500)</option>
+                <option value="3500">고구마크러스트(+3500)</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="beverage">
+            <label for="음료">음료</label><br>
+            <select id="음료">
+                <option value="0" selected>선택안함</option>
+                <option value="2000">코카콜라500ml(+2000)</option>
+                <option value="2500">제로콜라500ml(+2500)</option>
+                <option value="4000">코카콜라1.25L(+4000)</option>
+                <option value="4500">제로코카콜라1.25L(+4500)</option>
+            </select>
+        </div>
+
+        <br>
 
         <button type="button" class="btn btn-primary" id="btn-save">담기</button>
     </div>
 </div>
+
+
+<script>
+    'use strict';
+    document.getElementById('btn-save').onclick = function () {
+
+        let basic = Number(document.getElementById('기본가격').innerText);
+        let size = Number(document.getElementById('사이즈').value);
+        let edge = Number(document.getElementById('엣지').value);
+        let beverage = Number(document.getElementById('음료').value);
+        let sum = basic + size + edge + beverage;
+        alert(`가격은 총 ${sum}원입니다!`);
+    }
+</script>
 
 {{>layout/footer}}

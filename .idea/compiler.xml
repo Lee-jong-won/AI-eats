@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="AI-Eats.AI-Eats.main~1" target="17" />
-      <module name="AI-Eats.AI-Eats.test~1" target="17" />
+      <module name="AI-Eats.AI-Eats.main" target="17" />
+      <module name="AI-Eats.AI-Eats.test" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
