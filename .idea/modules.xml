@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AI-Eats.iml" filepath="$PROJECT_DIR$/.idea/AI-Eats.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AI-Eats.AI-Eats.main.iml" filepath="$PROJECT_DIR$/.idea/modules/AI-Eats.AI-Eats.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AI-Eats.AI-Eats.test.iml" filepath="$PROJECT_DIR$/.idea/modules/AI-Eats.AI-Eats.test.iml" />
     </modules>
   </component>
 </project>

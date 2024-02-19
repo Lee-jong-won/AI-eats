@@ -12,3 +12,18 @@
 
 </head>
 <body>
+
+로그인 정보 : <p th:text="${session.memberID}"></p>
+
+<br><br>
+
+<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+    <a href = "/rider"><button type="button" class="btn btn-primary">배달하기</button></a>
+    <a href = "/customer"><button type="button" class="btn btn-primary">배달받기</button></a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

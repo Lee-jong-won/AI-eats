@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>requestDetail</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>접수번호:</th>
+        <td th:text="${request.requestnum}"></td>
+    </tr>
+    <tr>
+        <th>접수자:</th>
+        <td th:text="${request.userRequestid}"></td>
+    </tr>
+    <tr>
+        <th>가게이름:</th>
+        <td th:text="${request.deliverylocation}"></td>
+    </tr>
+    <tr>
+        <th>메뉴이름:</th>
+        <td th:text="${request.menuname}"></td>
+    </tr>
+    <tr>
+        <th>메뉴가격:</th>
+        <td th:text="${request.menuprice}"></td>
+    </tr>
+    <tr>
+        <th>배차상태:</th>
+        <td th:text="${request.deliverystatus}"></td>
+    </tr>
+</table>
+
+<button onclick="deleteReq()">주문취소</button>
+<button onclick="updateStatus()">배달완료</button>
+<button onclick="backToList()">주문리스트</button>
+<script>
+    const deleteReq = () => {
+        console.log("삭제 요청");
+        const id = [[${request.requestnum}]];
+        location.href = "/customer/myRequestList/delete/" + id;
+    }
+
+    const updateStatus = () => {
+
+    }
+
+    const backToList = () => {
+        console.log("이전으로")
+        location.href = "/customer/myRequestList";
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>myRequestlist</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>주문번호</th>
+        <th>주문ID</th>
+        <th>가게이름</th>
+        <th>메뉴이름</th>
+        <th>가격</th>
+    </tr>
+    <tr th:each="request: ${requestList}">
+        <td><a th:href="@{|/customer/myRequestList/${request.requestnum}|}"  th:text="${request.requestnum}"></a></td>
+        <td th:text="${request.userRequestid}"></td>
+        <td th:text="${request.deliverylocation}"></td>
+        <td th:text="${request.menuname}"></td>
+        <td th:text="${request.menuprice}"></td>
+    </tr>
+</table>
+</body>
+</html>

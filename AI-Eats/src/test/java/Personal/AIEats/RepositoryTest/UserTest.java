@@ -1,15 +1,12 @@
 package Personal.AIEats.RepositoryTest;
 
 import Personal.AIEats.Repository.JpaDataUserRepository;
-import Personal.AIEats.domain.user;
+import Personal.AIEats.Entity.user;
 import jakarta.transaction.Transactional;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 
 import java.util.List;
@@ -38,7 +35,7 @@ public class UserTest {
         user TestUser2 = userRepository.save(TestUser);
 
         //then
-        assertEquals(TestUser2.getUser_id(), TestUser.getUser_id());
+        assertEquals(TestUser.getUser_id(), TestUser2.getUser_id());
     }
 
 
@@ -64,7 +61,7 @@ public class UserTest {
         user result = userRepository.findById("dlwhddnjs951").get();
 
         //then
-        assertEquals(Testuser2.getUser_id(), result.getUser_id());
+        assertEquals(result.getUser_id(), Testuser2.getUser_id());
     }
 
     @Test
